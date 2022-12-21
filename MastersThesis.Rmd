@@ -126,6 +126,8 @@ The model we set up first considers the simplest case of a two-period optimisati
 For example, the state of the world may not be aggregated correctly to the voters. 
 For our model, the focus is how the political system works when there is the issue of environmental degradation. Accordingly, the literature on both sides of the sustainability of the political economy is considered. Namely, the literature on exhaustible resources (including the optimal depletion thereof and the cake-eating optimisation problem) and the political economy (including the aggregation of political information and strategic voting).
 
+The first specification of the state of the world will be modeled within a global economy in which there is only one population of voters and information is aggregated imperfectly. The second specification of the model will introduce the two-country setting and how adjustments to the bias of voter signals and the relative size of the countries may affect each country's citizens' voting decisions. Thereafter, the two specifications will be compared to each other to determine how co-operation between countries with regards to environmental policies may be disadvantageous for consumption and may make the probability of a crisis more likely.
+
 #	Literature review 
 
 (approx. 2000)
@@ -158,39 +160,24 @@ The paper models the electoral system in a stylised way which means that the win
 On the other hand, Besley & Coate (1998) set up a model of representative democracy in which citizens are all able to avail themselves as candidates to run for public office. The model assumes that candidates must credibly commit to implementing their preferred policy if they win the election and voters vote accordingly. Voters derive utility from the ultimate policy outcome and the winning candidate’s identity, and derive disutility from the cost of running for office if they decide to do so. There is strategic voting because voters’ voting decisions are optimal if they are a best response, given the rest of voters’ decisions. The paper defines the equilibrium policy choice as efficient according to a Pareto optimal definition; if there are no alternative policy choices in the present period that could increase the expected utility of all citizens conditional on future policies that are democratic in nature. However, this model assumes complete information. It recommends that future research incorporates uncertainty regarding voters’ preferences and endogenises the formation of parties or candidates that run for office.
 
 #	Model set-up of sustainable consumption in global economy
-The first specification of the state of the world will be modeled within a global economy in which there is only one population of voters and information is aggregated imperfectly. The second specification of the model will add the political economy and voting decisions, as well as politicians who exhibit self-interest and non-responsiveness to information about voter’s preferences about climate policy.
+The first specification of the model will be set up in a global economy in which there is only one population of voters and information is aggregated imperfectly. Voters are uncertain about the true penalty that the economy will face if consumption today exceeds some threshold. First, the economy will be specified and thereafter, the consumer problem and voting decision-making process will be presented. 
 
-Two levels of uncertainty at this point: (i) what is the true threshold? Determined by nature. (ii) what opinion do most voters hold? Ie are majority pessimistic about the costs associated with consuming unsustainably? Assuming voter sincerity (ie voting according to beliefs/signals)
-
-## Economy
-In order to model sustainability in the political economy, we first set up a simple model of sustainable consumption over two periods $t = 1, 2$. The choice variable in this economy is consumption in period one ($c_1$) and consumption in period two ($c_2$) is stochastic and dependent on the value of $c_1$ as follows. $c_1$ is defined as sustainable if it is below an unknown threshold value ($\tilde{c}$). This is because if $c_1$ is sustainable, then $c_2$ can also be set at the same level ($c_1$ = $c_2$). However, if $c_1$ is unsustainable, and exceeds $\tilde{c}$ in period one, then the economy will face some penalty in period two ($\underline{c}$), and thus $c_2$ will be much lower than $c_1$ ($c_1> \underline{c}$). Thus, we can model $c_2$ as a function of $c_1$ as follows:
+## Economy {-}
+In order to model sustainability in the political economy, we first set up a simple model of sustainable consumption over two periods $t = 1, 2$. The choice variable in this economy is consumption in period one ($c_1$) and consumption in period two ($c_2$) is stochastic and dependent on the value of $c_1$ as follows. $c_1$ is defined as sustainable if it is below an unknown threshold value ($\tilde{c}$). This is because if $c_1$ is sustainable, then $c_2$ can also be set at the same level ($c_1$ = $c_2$). However, if $c_1$ is unsustainable, and exceeds $\tilde{c}$ in period one, then the economy will face some penalty in period two ($\underline{c}$) and $c_2$ will be much lower than $c_1$ as a result ($c_1> \underline{c}$). Thus, we can model $c_2$ as a function of $c_1$ as follows:
 
 $$
 c_2\left(c_1\right)= \begin{cases}c_1 & \text { if } c_1 \leq \tilde{c} \\ \underline{c} & \text { otherwise }\end{cases}
 $$
 
-Under perfect information, the optimal choice of c1 should be set at the true highest threshold (cH = c1) to maximise sustainable consumption in period one and to ensure sustainable consumption will be possible in period two. The lowest threshold value cL represents the safe level of consumption at which the probability of a crisis is very low. The highest threshold value cH represents the maximum consumption value that may be consumed in period one without incurring a penalty and thus reduced consumption in period two.
-Consumers
-The decision problem faced by consumers is to maximise their lifetime utility by their choice of consumption in period one. 
+## Consumers {-}
+
+The decision problem faced by consumers in the global economy is to maximise their lifetime utility by their choice of $c_1$ 
 
 $$
 U\left(c_1\right)=u\left(c_1\right)+\mathbb{E} u\left(c_2\left(c_1\right)\right)
 $$
 
-where the utility derived from consumption is **function form and p represents relative risk aversion
-
-$$
-U(C)=\frac{c^(1-\rho)-1}{1-\rho}
-$$
-Due to the uncertainty in the problem, because there is uncertainty about how likely climate crisis is, consumers hold beliefs about the optimal level of consumption in period one and the probability of crisis at that level of consumption. These beliefs are determined by private signals $\hat{\underline{c}}_k$ that consumers receive which are noisy and conceal the true value $\underline{c}$, ie information aggregation is not perfect/efficient
-$$
-\hat{\underline{c}}_k=\underline{c}+\varepsilon_k
-$$
-with $\mathbb{E}\left(\varepsilon_k\right)=0$ 
-
-This is a realistic assumption because in the real world consumers are exposed to a variety of news sources (noisy) and different headlines which predict different outcomes for the climate in the future (*ref). 
-In this model, the optimal consumption point across individuals is assumed to be uniformly distributed between the low threshold and high threshold. The low and high thresholds of consumption in period one are set as exogenous parameters, and are set to 0.5 and 1.5 respectively. Accordingly, the probability of reaching the tipping point is 0 if the choice of c1 is below the lowest possible threshold which means there is no chance of a climate crisis and 1 if c1 exceeds the highest possible threshold which means that climate crisis is inevitable. 
-
+and is subject to the constraint that it should not exceed $\tilde{c}$ and be set between the lowest threshold ($c_L$) and the highest threshold ($c_H$).  In this setting, $c_L$ represents the safest level of consumption at which the probability of a crisis is zero. This may be considered to be the very lowest consumption that is required to continue living (ref?). On the other hand, $c_H$ represents the maximum consumption value that may be consumed in period one without incurring a penalty and thus represents a "tipping point" (Lemoine & Traeger**) which once it is exceeded, the probability of a crisis is one. If consumers had perfect information, the optimal choice of $c_1$ should be set at $c_H$ to maximise consumption in both period one and period two by ensuring that $c_1$ is sustainable.
 
 $$
 \operatorname{Pr}\left(\tilde{c} \leq c_1\right)=\left\{\begin{array}{cc}
@@ -200,25 +187,40 @@ $$
 \end{array}\right.
 $$
 
-From the signals that are drawn randomly for each individual, there are different associated optimal probability of crisis points. In other words, the different signals that individuals draw determine their belief about which probability of crisis is optimal. 
+where the utility derived from consumption is assumed to take the relative risk aversion functional form and $\rho$ is assumed to be 1.5.
+
+$$
+U(C)=\frac{c^{1-\rho}-1}{1-\rho}
+$$
+
+Due to the uncertainty in the consumer problem, because there is a lack of consensus regarding how likely climate crisis is (ref??), consumers hold beliefs about the optimal level of consumption in period one and the probability of crisis at that level of consumption. These beliefs are determined by private signals $\hat{\underline{c}}_k$ that consumers receive which are noisy and conceal the true value $\underline{c}$, ie information aggregation is not perfect/efficient.
+
+$$
+\hat{\underline{c}}_k=\underline{c}+\varepsilon_k
+$$
+
+where  $\mathbb{E}\left(\varepsilon_k\right)=0$ and it is assumed that $\hat{\underline{c}}_k$ are drawn from a uniform distribution between $c_L$ and $c_H$. From the signals that are drawn randomly for each individual, there are different associated optimal probability of crisis points. In other words, the different signals that individuals draw determine their belief about which probability of crisis is optimal, and thus lifetime utility constitutes the utility derived from period one consumption a the expected utility of the weighted probability average of period two consumption as follows: 
 
 $$
 U\left(c_1 \mid \hat{\underline{c}}_{k}\right)=u\left(c_1\right)+\operatorname{Pr}\left(\tilde{c} \leq c_1\right) u\left(\hat{\underline{c}}_{k}\right)+\left(1-\operatorname{Pr}\left(\tilde{c} \leq c_1\right)\right) u\left(c_1\right)
 $$
+
+This is a realistic assumption because in the real world consumers are exposed to a variety of news sources (noisy) and different news headlines which each predict different outcomes for the climate in the future (*ref). In this model, the thresholds of consumption in period one are set as exogenous parameters, and are set to $c_L$ = 0.5 and $c_H$ = 1.5 respectively. _To alter the thresholds of consumption could yield different results but beyond the scope of this paper_. 
 
 For example, Figure 1 shows the cumulative density function of the probability of crisis and it indicates that individuals who receive higher signals hold a more optimistic belief about how bad the climate crisis may be, as they believe that the probability of a climate crisis occurring can be greater at the optimum point. An individual’s optimal probability of crisis depends on the signal provided to the individual. The higher the signal, the higher the optimal consumption point and thus the higher the optimal probability of crisis. This is realistic because individual’s that have been provided with information that indicates that climate crisis is unlikely will consume more and thus be comfortable with a higher probability of crisis.
 
 \begin{center}
 Figure 1
 \end{center}
-![Figure1](Figure1base.jpg){align=center}{width=10%}
+![Figure1](images/Figure1base.jpg){align=center}{width=10cm}
 
 This is key in this story. How big of a risk do citizens believe to be optimal/okay?
 
-Voters
-According to the median voter theorem, if preferences are single peaked (which is implied by the normally distributed signals that determine preferences and beliefs about the probability of crisis) then the median voter will be the winning candidate in a vote, if we assume voter sincerity (*ref). 
+## Voters {-}
+According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed signals that determine preferences and beliefs about the probability of crisis) then the median voter will be the winning candidate in a vote, if we assume voter sincerity (*ref). 
 
-4	A simple model of sustainable consumption in two-country economy
+#	A simple model of sustainable consumption in two-country economy
+
 The impact of another country may impact the optimal level of consumption in period one. More realistic to consider countries’ interdependent impact, for example in IEAs.
 Buchholz et al (2005) reaches an analytical result in which voters may be incentivised to vote for less green candidates in order to improve their own country’s bargaining position when there is an IEA, which implies that unless there is full co-operation, any bargaining outcome is bad for environmental policy and the probability of a climate crisis.
 Buchholz et al (2005) compares the isolationist case against the bargaining case with an IEA implemented between two countries to analyse the impact of IEAs on environmental policy. Similarly, this paper compares the global democracy of one global economy against the Nash equilibrium solution found in the case of two countries which bargain together as in an IEA.
@@ -243,45 +245,33 @@ prob of being in country A = country A share + bias(cdf of signal - country A sh
 
 
 
-Are imbalances good or bad???? SEX
+
+
+# Discussion and results 
+
+(approx 1000)
+
+Are imbalances good or bad????
 Unless there is full co-operation, any bargaining is sub-optimal
 
-# 0.1 Country A share 0 Bias
+## 0.1 Country A share 0 Bias {-}
 N_A = 104, N_B = 896
 c_average_NE = 1.0363
 prob_crisis_NE =0.5363
 
-# 0.5 Country A share and 0 Bias
+## 0.5 Country A share and 0 Bias {-}
 For the base case, the share of each country is 50/50. There is no bias introduced. Both countries receive signals that are uniformly and normally distributed.
 
 Size of country A is 484 and country B is 516
 c_average_NE =1.2134
 prob_crisis_NE = 0.7134
 
-# 0.5 Country A share 0.9 Bias
+## 0.5 Country A share 0.9 Bias {-}
 N_A =   523 N_B =  477
 c_average_NE =  1.2234
 prob_crisis_NE =0.7234
 
-# Discussion and results 
 
-(approx 1000)
-
-\usepackage{subfig}
-
-\documentclass[10pt,a4paper]{article}
-\usepackage[demo]{graphicx}
-\usepackage{subfig}
-\begin{document}
-\begin{figure}%
-    \centering
-    \subfloat[\centering label 1]{{\includegraphics[width=5cm]{img1} }}%
-    \qquad
-    \subfloat[\centering label 2]{{\includegraphics[width=5cm]{img2} }}%
-    \caption{2 Figures side by side}%
-    \label{fig:example}%
-\end{figure}
-\end{document}
 
 Kemp (1976) comparative static results 
 
@@ -302,13 +292,6 @@ tabl2 <- "
 "
 cat(tabl2)
 ```
-
-
-
-To reference a section, you have to set a label using ``\\label'' in R, and then reference it in-text as e.g. referencing a later section, Section \ref{Meth}.
-
-
-
 
 
 
