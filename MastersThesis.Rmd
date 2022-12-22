@@ -214,7 +214,7 @@ Figure 1 shows the cumulative density function of the probability of crisis. It 
 \begin{center}
 Figure 1
 \end{center}
-![Figure1](images/Figure1base.jpg){ width=10% }
+![Figure1](images/Figure1base.jpg){ width=40%, height=60% }
 
 This is key in this story. How big of a risk do citizens believe to be optimal/okay?
 
@@ -231,29 +231,18 @@ Besley & Coate (1998) finds that according to the median voter result and Condor
 
 The impact of another country may impact the optimal level of consumption. More realistic to consider countries’ interdependent impact, for example in IEA, especially considering that global climate change cannot be achieved by one country acting unilaterally (ref?). As in the global economy case, each citizen in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis, because if they are signalled that climate crisis would not reduce $c_2$ by much, then a higher probability of this crisis occuring is not worrisome.
 
-First, split the global democracy into two different country populations after each individual has received their private signals. Each individual is divided probabilistically into country A and country B so as to ensure random splitting. The probability of being assinged to country A depends on two parameters ($countryAshare$ and $bias$) in addition to the cumulative density function (cdf) of each individual's private signal.
+First, split the global democracy into two different country populations after each individual has received their private signals. Each individual is divided probabilistically into country A and country B so as to ensure random splitting. The probability of being assigned to country A depends on two parameters ($countryAshare$ and $bias$) in addition to the cumulative density function (cdf) of each individual's private signal. For each individual, a number is drawn between 0 and 1 and if this draw is less than or equal to the probability of country A, then the individual is assigned to country A. If not, the individual is assigned to country B.
 
 $$probability_of_country A = country A share + bias(cdf_of_signal - country A share)$$
 
-Compute expected utilities for every possible candidate:
-each citizen runs for election, promising to implement their their ideal consumption
+Second, the expected utilities for every possible candidate are computed under the assumption that each citizen runs for election and promises to implement their their ideal consumption if elected. Accordingly, each voter considers any pairwise competition based on the expected utility they will obtain based on their own belief about $\tilde{c}$ as formed due to their private signal $\hat{\underline{c}}_k$ if the any candidate implements their promised, preferred policy.
 
-each voter considers any pairwise competition based on the expected utility they will obtain if the either candidate implements their promise
-First step: find the expected utility of each citizen under the regime of each other citizen. The row's contain the different choices of c1 of the different options for citizen-governor. The columns represent the experience (expected utility) of the different citizens based on their beliefs about c_.
-
-Variations in country share and bias
+In addition to the fixed parameters discussed in the preceding section, there are adjustable parameters in the two country case. Variations in country share A can be implemented by selecting a value between 0 and 0.5, which alters the target fraction of the global democracy population that will be probabilistically assigned to country A. Variations in bias can be implemented by selecting a value between 0 and 0.9. This represents the bias in country A as if the value is higher, then country A's voters are more likely to receive higher signals and thus are more likely to believe a higher optimal consumption level and a higher optimal probability of crisis. 
 
 Next, find the mutual best responses
 Find the Nash equilibrium
 
 Buchholz _et al_ (2005) compares the isolationist case against the bargaining case with an IEA implemented between two countries to analyse the impact of IEAs on environmental policy. Similarly, this paper compares the global democracy of one global economy against the Nash equilibrium solution found in the case of two countries which bargain together according to  an IEA.
-
-
-
-
-
-
-
 
 # Discussion and results 
 
@@ -291,7 +280,7 @@ Kemp (1976) comparative static results
 
 
 \begin{center}
-Table 2: Model comparison
+Table 1: Model comparison
 \end{center}
 ```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 tabl2 <- "

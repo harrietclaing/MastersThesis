@@ -621,7 +621,7 @@ Figure 1
 
 \begin{figure}
 \centering
-\includegraphics[width=0.1\textwidth,height=\textheight]{images/Figure1base.jpg}
+\includegraphics[width=\textwidth,height=0.4\textheight]{images/Figure1base.jpg}
 \caption{Figure1}
 \end{figure}
 
@@ -666,29 +666,45 @@ bargaining}\label{model-set-up-of-sustainable-consumption-in-two-country-economy
 The impact of another country may impact the optimal level of
 consumption. More realistic to consider countries' interdependent
 impact, for example in IEA, especially considering that global climate
-change cannot be achieved by one country acting unilaterally (ref?)
-
-As in the global economy case, each citizen in each country receives
+change cannot be achieved by one country acting unilaterally (ref?). As
+in the global economy case, each citizen in each country receives
 private signals \(\hat{\underline{c}}_k\) which determine their optimal
 level of individual consumption and this maps onto their optimal
 probability of crisis, because if they are signalled that climate crisis
 would not reduce \(c_2\) by much, then a higher probability of this
 crisis occuring is not worrisome.
 
-First, split the global democracy and individual's signals into two
-different populations; divide them probabilistically into country A and
-country B so as to ensure random splitting.
+First, split the global democracy into two different country populations
+after each individual has received their private signals. Each
+individual is divided probabilistically into country A and country B so
+as to ensure random splitting. The probability of being assigned to
+country A depends on two parameters (\(countryAshare\) and \(bias\)) in
+addition to the cumulative density function (cdf) of each individual's
+private signal. For each individual, a number is drawn between 0 and 1
+and if this draw is less than or equal to the probability of country A,
+then the individual is assigned to country A. If not, the individual is
+assigned to country B.
 
-Compute expected utilities for every possible candidate: each citizen
-runs for election, promising to implement their their ideal consumption
+\[probability_of_country A = country A share + bias(cdf_of_signal - country A share)\]
 
-each voter considers any pairwise competition based on the expected
-utility they will obtain if the either candidate implements their
-promise First step: find the expected utility of each citizen under the
-regime of each other citizen. The row's contain the different choices of
-c1 of the different options for citizen-governor. The columns represent
-the experience (expected utility) of the different citizens based on
-their beliefs about c\_.
+Second, the expected utilities for every possible candidate are computed
+under the assumption that each citizen runs for election and promises to
+implement their their ideal consumption if elected. Accordingly, each
+voter considers any pairwise competition based on the expected utility
+they will obtain based on their own belief about \(\tilde{c}\) as formed
+due to their private signal \(\hat{\underline{c}}_k\) if the any
+candidate implements their promised, preferred policy.
+
+In addition to the fixed parameters discussed in the preceding section,
+there are adjustable parameters in the two country case. Variations in
+country share A can be implemented by selecting a value between 0 and
+0.5, which alters the target fraction of the global democracy population
+that will be probabilistically assigned to country A. Variations in bias
+can be implemented by selecting a value between 0 and 0.9. This
+represents the bias in country A as if the value is higher, then country
+A's voters are more likely to receive higher signals and thus are more
+likely to believe a higher optimal consumption level and a higher
+optimal probability of crisis.
 
 Next, find the mutual best responses Find the Nash equilibrium
 
@@ -698,9 +714,6 @@ the impact of IEAs on environmental policy. Similarly, this paper
 compares the global democracy of one global economy against the Nash
 equilibrium solution found in the case of two countries which bargain
 together according to an IEA.
-
-Variations in country share and bias
-\[probability of being in country A = country A share + bias(cdf of signal - country A share)\]
 
 \hypertarget{discussion-and-results}{%
 \section{Discussion and results}\label{discussion-and-results}}
@@ -750,7 +763,7 @@ N\_A = 523 N\_B = 477 c\_average\_NE = 1.2234 prob\_crisis\_NE =0.7234
 Kemp (1976) comparative static results
 
 \begin{center}
-Table 2: Model comparison
+Table 1: Model comparison
 \end{center}
 
 \begin{longtable}[]{@{}lcc@{}}
