@@ -615,14 +615,13 @@ realistic because individual's that have been provided with information
 that indicates that climate crisis is unlikely will consume more and
 thus be comfortable with a higher probability of crisis.
 
-\begin{center}
-Figure 1
-\end{center}
+\begin{figure}[H]
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth,height=0.4\textheight]{images/Figure1base.jpg}
-\caption{Figure1}
+{\centering \includegraphics[width=0.8\linewidth]{images/Figure1base} 
+
+}
+
+\caption{Optimal probability of crisis as mapped from the different beliefs of the optimal consumption level}\label{fig:unnamed-chunk-1}
 \end{figure}
 
 This is key in this story. How big of a risk do citizens believe to be
@@ -663,27 +662,30 @@ which is the median voter.
 with
 bargaining}\label{model-set-up-of-sustainable-consumption-in-two-country-economy-with-bargaining}}
 
-The impact of another country may impact the optimal level of
-consumption. More realistic to consider countries' interdependent
-impact, for example in IEA, especially considering that global climate
-change cannot be achieved by one country acting unilaterally (ref?). As
-in the global economy case, each citizen in each country receives
-private signals \(\hat{\underline{c}}_k\) which determine their optimal
-level of individual consumption and this maps onto their optimal
-probability of crisis, because if they are signalled that climate crisis
-would not reduce \(c_2\) by much, then a higher probability of this
-crisis occuring is not worrisome.
+To develop the model set-up further, the impact of another country's
+consumption level on the optimal level of consumption is incorporated.
+The implications of a two-country model that consider the
+interdependence between countries is more realistic, for example in an
+IEA, especially considering that global climate change cannot be
+achieved by one country acting unilaterally (ref?).
 
-First, split the global democracy into two different country populations
-after each individual has received their private signals. Each
-individual is divided probabilistically into country A and country B so
-as to ensure random splitting. The probability of being assigned to
+As in the global economy model set-up, each citizen in each country
+receives private signals \(\hat{\underline{c}}_k\) which determine their
+optimal level of individual consumption and this maps onto their optimal
+probability of crisis. Accordingly, if individuals are signalled to
+believe that the climate crisis would not reduce \(c_2\) by much, then a
+higher probability of this climate crisis occurring is not worrisome.
+
+Individuals in the global economy are split into two different country
+populations after each individual has received their private signals.
+Each individual is divided probabilistically into country A and country
+B to ensure random splitting. The probability of being assigned to
 country A depends on two parameters (\(countryAshare\) and \(bias\)) in
-addition to the cumulative density function (cdf) of each individual's
-private signal. For each individual, a number is drawn between 0 and 1
-and if this draw is less than or equal to the probability of country A,
-then the individual is assigned to country A. If not, the individual is
-assigned to country B.
+addition to the cumulative density function (\(cdf\)) of each
+individual's private signal. For each individual, a number is drawn
+between 0 and 1 and if this draw is less than or equal to the
+probability of country A, then the individual is assigned to country A.
+If not, the individual is assigned to country B.
 
 \[probability_of_country A = country A share + bias(cdf_of_signal - country A share)\]
 
@@ -734,6 +736,35 @@ bargaining is sub-optimal
 
 Voters in global economy vote for the median because this maximises
 their expected utility.
+
+\newpage
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth]{images/Fig2_0.1Size0Bias} 
+
+}
+
+\caption{Nash equilibrium for 0.1 country A share}\label{fig:unnamed-chunk-2}
+\end{figure}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth]{images/Fig2_0.5Size0Bias} 
+
+}
+
+\caption{Nash equilibrium for 50/50 country split}\label{fig:unnamed-chunk-3}
+\end{figure}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth]{images/Fig2_0.5Size0.9Bias} 
+
+}
+
+\caption{Nash equilibrium for 0.9 bias for country A}\label{fig:unnamed-chunk-4}
+\end{figure}
 
 \hypertarget{country-a-share-0-bias}{%
 \subsection*{0.1 Country A share 0 Bias}\label{country-a-share-0-bias}}
