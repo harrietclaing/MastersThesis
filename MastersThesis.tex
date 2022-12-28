@@ -687,7 +687,7 @@ between 0 and 1 and if this draw is less than or equal to the
 probability of country A, then the individual is assigned to country A.
 If not, the individual is assigned to country B.
 
-\[probability_of_country A = country A share + bias(cdf_of_signal - country A share)\]
+\[probability_{of}country A = country A share + bias(cdf_{of}signal - country A share)\]
 
 Second, the expected utilities for every possible candidate are computed
 under the assumption that each citizen runs for election and promises to
@@ -706,21 +706,44 @@ can be implemented by selecting a value between 0 and 0.9. This
 represents the bias in country A as if the value is higher, then country
 A's voters are more likely to receive higher signals and thus are more
 likely to believe a higher optimal consumption level and a higher
-optimal probability of crisis.
+optimal probability of crisis. To compare the voting outcomes between
+different scenarios, three variations of the two-country model are
+estimated. Firstly, the 0.1 country A share case in which the size of
+two-countries differ dramatically. Secondly, the 50/50 country split
+case in which each country is equal in size. Lastly, the 0.9 bias for
+country A case in which country A is more likely to contain individuals
+who received a higher private signal, and thus have a higher optimal
+consumption level and higher optimal probability of crisis.
 
-Next, find the mutual best responses Find the Nash equilibrium
-
-Buchholz \emph{et al} (2005) compares the isolationist case against the
-bargaining case with an IEA implemented between two countries to analyse
-the impact of IEAs on environmental policy. Similarly, this paper
-compares the global democracy of one global economy against the Nash
-equilibrium solution found in the case of two countries which bargain
-together according to an IEA.
+Next, find the mutual best responses for each country given what the
+other country's beliefs based on their private signals are. Each country
+votes for the candidate that will yield the best response given how the
+other country votes to maximise expected utility. For example, if
+country A is biased to consume at a high level, then it would be a best
+response for country B to consume at a lower level to reduce the
+probability of crisis to be closer to country B's optimal probability of
+crisis. The Nash equilibrium in the two-country model is determined
+using Matlab's built-in optimisers. In each country, each indiviual has
+a best response function and vote for the median candidate, as found in
+the median voter theory (ref??), conditional on the other country's
+consumption level.
 
 \hypertarget{discussion-and-results}{%
 \section{Discussion and results}\label{discussion-and-results}}
 
 (approx 1000)
+
+To analyse whether co-operation in the political economy between two
+countries is harmful for environmental policies and mitigating climate
+crisis, the global democracy model set-up is compared to three
+variations of the two-country case. Buchholz \emph{et al} (2005)
+compares the isolationist case of one country implementing climate
+policies unilaterally against the bargaining case with an IEA
+implemented between two countries to analyse the impact of IEAs on
+environmental policy. Similarly, this paper compares the global
+democracy of one global economy against the Nash equilibrium solution
+found in the case of two countries which bargain together according to
+an IEA.
 
 Buchholz \emph{et al} (2005) reaches an analytical result in which
 voters may be incentivised to vote for less green candidates in order to
@@ -731,11 +754,11 @@ crisis. Besley \& Coate (1998) also suggests that non-co-operation with
 other countries may yield a greater expected utility than if
 co-operation occurs.
 
-Are imbalances good or bad???? Unless there is full co-operation, any
-bargaining is sub-optimal
-
 Voters in global economy vote for the median because this maximises
 their expected utility.
+
+Are imbalances good or bad???? Unless there is full co-operation, any
+bargaining is sub-optimal
 
 \newpage
 
@@ -770,19 +793,62 @@ their expected utility.
 \subsection*{0.1 Country A share 0 Bias}\label{country-a-share-0-bias}}
 \addcontentsline{toc}{subsection}{0.1 Country A share 0 Bias}
 
-N\_A = 104, N\_B = 896 c\_average\_NE = 1.0363 prob\_crisis\_NE =0.5363
+In the first variation of the two-country model, the country A share
+parameter is set to 0.1, which means that the probabilistic assignment
+of an individual being a citizen in country A is smaller. In our
+numerical simulation, the result of this is that the population in
+country A is 104 and in country B is 896. This demonstrates that the
+probabilistic assignment results in a random and imperfect
+assignment(??).
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth]{images/Fig4_0.1Size0Bias} 
+
+}
+
+\caption{0.1 Country A share model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+As in Figure 5.1, when country A has a significantly smaller population
+size it is a best response for country A to consume at the highest
+threshold \(c_1=c_H=1.5\) that is possible irrespective of the
+consumption level that country B chooses. On the other hand, country B's
+best response is to consume at a significantly lower level of
+approximately \(c_1=1\) irrespective of what country A consumes. Some of
+this higher consumption level in country A may be due to the higher
+private signals given to country A citizens, as in Figure
+(\textgreater\textgreater). In comparison to the global democracy point
+plotted on the Figure 5.1, both countries consume more in period 1 which
+could only be optimal if both countries' individuals believe that a
+higher probability of crisis is optimal. However, this difference in
+beliefs is not the case in this model variation because it only differs
+from the global democracy in one aspect, which is the country size. Thus
+this outcome is slightly less efficient than the global democracy case,
+as the probability of crisis in Nash equilibrium is higher, as in Table
+1.
 
 \hypertarget{country-a-share-and-0-bias}{%
 \subsection*{0.5 Country A share and 0
 Bias}\label{country-a-share-and-0-bias}}
 \addcontentsline{toc}{subsection}{0.5 Country A share and 0 Bias}
 
-For the base case, the share of each country is 50/50. There is no bias
-introduced. Both countries receive signals that are uniformly and
-normally distributed.
+In this model variation, the share of each country is 50/50, and as a
+result the population size for . There is no bias introduced. As in the
+previous model variation, both countries receive signals that are
+uniformly distributed, as in Figure (\textgreater\textgreater)
 
 Size of country A is 484 and country B is 516 c\_average\_NE =1.2134
 prob\_crisis\_NE = 0.7134
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth]{images/Fig4_0.5Size0Bias} 
+
+}
+
+\caption{50/50 country split model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B}\label{fig:unnamed-chunk-6}
+\end{figure}
 
 \hypertarget{country-a-share-0.9-bias}{%
 \subsection*{0.5 Country A share 0.9
@@ -791,15 +857,32 @@ Bias}\label{country-a-share-0.9-bias}}
 
 N\_A = 523 N\_B = 477 c\_average\_NE = 1.2234 prob\_crisis\_NE =0.7234
 
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.45\linewidth]{images/Fig4_0.5Size0.9Bias} 
+
+}
+
+\caption{0.9 Country A bias model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B}\label{fig:unnamed-chunk-7}
+\end{figure}
+
 Kemp (1976) comparative static results
 
 \begin{center}
 Table 1: Model comparison
 \end{center}
 
-\begin{longtable}[]{@{}lcc@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3636}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3030}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule()
-& Period 1 consumption & Probability of crisis \\
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Country A period 1 consumption
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Probability of crisis in NE
+\end{minipage} \\
 \midrule()
 \endhead
 Global democracy & 0.9499 & 0.4499 \\
@@ -808,6 +891,8 @@ Two countries 0.5 share & 1.2134 & 0.7134 \\
 Two countries 0.9 bias & 1.2234 & 0.7234 \\
 \bottomrule()
 \end{longtable}
+
+\#ADD A COLUMN TO THIS !!!! COUNTRY A AND COUNTRY B
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
