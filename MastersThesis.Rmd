@@ -220,7 +220,6 @@ In this model, the thresholds of consumption in period one are set as exogenous,
 
 Figure 1 shows the cumulative density function of the probability of crisis. It is curved due to the relative risk aversion functional form. Figure 1 indicates that individuals who receive higher private signals hold a more optimistic belief about how bad the climate crisis may be. An individual’s optimal probability of crisis depends on the signal provided to the individual. The higher the signal, the higher the optimal consumption point and thus the higher the optimal probability of crisis. This is realistic because individuals that have been provided with information that indicates that the climate crisis is unlikely will consume more and thus be comfortable with a higher probability of crisis. Thus, beliefs are a key driver of consumption in our model.
 
-
 ```{r, echo=FALSE, out.width="80%", fig.cap="Optimal probability of crisis as mapped from the different beliefs of the optimal consumption level"}
 
 knitr::include_graphics('images/Figure1base.jpg')
@@ -229,11 +228,12 @@ knitr::include_graphics('images/Figure1base.jpg')
 This model builds on Besley & Coate (1998)'s model which selects candidates exogenously and assumes complete information and instead assumes imperfect information and unique signals that are randomly provided to each voter. 
 
 ## Voters {-}
-According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed signals that determine preferences and beliefs about the probability of crisis) then the median voter will be the winning candidate in a vote, if we assume voter sincerity (*ref). 
+
+Besley & Coate (1998) finds that according to the median voter result and Condorcet Jury theorem, there is one ultimate winning candidate which is the median voter. According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed signals that determine preferences and beliefs about the probability of crisis) then the median voter will be the winning candidate in a vote, if we assume voter sincerity (*ref). 
+
+Assume democracy
 
 Assume simple majority voting and that each candidate could be running for public office, thus each voter considers each pairwise comparison between each individual. Voters are assumed to know that candidates could only implement their preferred policy, in this context their individual optimal consumption point and how this maps onto their optimal probability of crisis. Besley & Coate (1998) voters voting decisions are their best response given the rest of voters decisions. Use the same assumption that candidates cannot credibly commit to any other policy other than their own policy preference and voters know this, which is realistic.
-
-Besley & Coate (1998) finds that according to the median voter result and Condorcet Jury theorem, there is one ultimate winning candidate which is the median voter.
 
 #	Model set-up of sustainable consumption in two-country economy with bargaining
 
@@ -241,7 +241,7 @@ Besley & Coate (1998) finds that according to the median voter result and Condor
 
 To develop the model set-up further, the impact of another country's consumption level on the optimal level of consumption is incorporated. The implications of a two-country model that consider the interdependence between countries is more realistic, for example in an IEA, especially considering that global climate change cannot be achieved by one country acting unilaterally (ref?). 
 
-As in the global economy model set-up, each citizen in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis. Accordingly, if individuals are signalled to believe that the climate crisis would not reduce $c_2$ by much, then a higher probability of this climate crisis occurring is not worrisome.
+As in the global democracy model set-up, each citizen in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis. Accordingly, if individuals are signalled to believe that the climate crisis would not reduce $c_2$ by much, then a higher probability of this climate crisis occurring is not worrisome.
 
 Individuals in the global economy are split into two different country populations after each individual has received their private signals. Each individual is divided probabilistically into country A and country B to ensure random splitting. The probability of being assigned to country A depends on two parameters ($countryAshare$ and $bias$) in addition to the cumulative density function ($cdf$) of each individual's private signal. For each individual, a number is drawn between 0 and 1 and if this draw is less than or equal to the probability of country A, then the individual is assigned to country A. If not, the individual is assigned to country B.
 
