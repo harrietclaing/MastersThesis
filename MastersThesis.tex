@@ -3,7 +3,7 @@
 \usepackage{lmodern}
 %%%% My spacing
 \usepackage{setspace}
-\setstretch{1.2}
+\setstretch{1.5}
 \DeclareMathSizes{12}{14}{10}{10}
 
 % Wrap around which gives all figures included the [H] command, or places it "here". This can be tedious to code in Rmarkdown.
@@ -177,7 +177,7 @@
 
 
 \author[Add1]{Harriet Catherine Laing}
-\ead{nfkatzke@gmail.com}
+\ead{harrietclaing@gmail.com}
 
 
 
@@ -189,13 +189,7 @@
 
 \begin{abstract}
 \small{
-Abstract to be written here. The abstract should not be too long and
-should provide the reader with a good understanding what you are writing
-about. Academic papers are not like novels where you keep the reader in
-suspense. To be effective in getting others to read your paper, be as
-open and concise about your findings here as possible. Ideally, upon
-reading your abstract, the reader should feel he / she must read your
-paper in entirety.
+Abstract to be written here.
 }
 \end{abstract}
 
@@ -204,7 +198,7 @@ paper in entirety.
 
 \begin{keyword}
 \footnotesize{
-Multivariate GARCH \sep Kalman Filter \sep Copula \\
+Environmental policy \sep Political economy \sep Numerical model \\
 \vspace{0.3cm}
 }
 \end{keyword}
@@ -254,6 +248,7 @@ greater voting weight, compared to larger countries geographically with
 less dominance politically. This results in sub-optimal outcomes such as
 dominant countries contributing to pollution in larger countries that
 are geographically positioned in relatively more vulnerable positions.
+
 The model we set up first considers the simplest case of a two-period
 optimisation problem. There is a world with abundant resources, where
 consumers believe that they can consume a lot today and tomorrow, and
@@ -282,46 +277,83 @@ crisis more likely.
 \hypertarget{literature-review}{%
 \section{Literature review}\label{literature-review}}
 
-(approx. 2000)
+(approx. 2000, currently 2100)
 
-Pindyck (1978) models two optimal paths for using non-renewable
-resources depending on the initial resource endowment and the different
-marginal costs of extraction. If the initial reserve is large, then this
-will cause extraction costs to be low and thereby price will slowly rise
-over time. On the other hand, if the initial reserve has been depleted
-and is small, both the price and the extraction costs will be high. As
-reserves decline, the production cost for using resources increases and
-potential profits reduces. Accordingly, as marginal costs increase for
-extraction, producers will begin to conserve non-renewable resources
-because the marginal benefit thereof is smaller. Therefore, for
-non-renewable resources with a fixed reserve its time horizon can be
-increased with economic incentives such as profit opportunities that
-increase exploratory activity; ``potential reserves'' are unlimited.
-However, the model does not include the situation in which the
-non-renewable quantities are uncertain.
+The literature which models the utilisation and extraction of
+non-renewable resources began with contributions that did not
+incorporate uncertainties (Pindyck, 1978) and developed to consider the
+impact of consumption in the present period on the resources remaining
+for the following period (Adler \& Treich, 2017) and ultimately began
+incorporating the possibility of consumption in the present period
+leading to increasing the probability of crisis (Loury, 1978; Kumar,
+2005; Lemoine \& Traeger, 2014).
 
-Kemp (1976) was the first to consider the cake-eating optimisation
-problem for an exhaustible resource of an unknown size and the idea has
-since been developed in the literature. Loury (1978) investigates the
-problem of optimal planning when faced with two issues in this regard;
-(i) the possibility of exhaustion of the resource, and (ii) learning
-about the distribution of reserves over time through exploration and
-extraction activities. Under certainty when a resource's reserve is
-known, the possibility of exhaustion occurs only asymptotically.
-However, when the resource base is of unknown size, the date on which it
-will have been completely exploited is also a random variable. The
-choice of the rate of consumption is necessarily affected by the impact
-of the consumption rate on the probability of `crisis', or likelihood of
-reaching the tipping point. Therefore, this paper demonstrates that the
-possibility of premature exhaustion alters the requirements of an
-optimal consumption path. The model used in the paper includes the date
-upon which the resource is exhausted as a choice variable and specifies
-some minimal level of resource consumption that is necessary to sustain
-an economy. ``Set the objective function as the maximisation of the
-expected value of the integral of discounted utility. Employ dynamic
-programming techniques to deduce some comparative static results'' The
-uncertain reserve is a random variable that is drawn from a cumulative
-density function.
+Pindyck (1978) models two different optimal paths for using
+non-renewable resources which depends on the initial resource endowment
+and the different marginal costs of extraction for different resources.
+If the initial reserve endowment is large, then this causes extraction
+costs to be low and thereby the price will slowly rise over time as the
+resource depletes. On the other hand, if the initial reserve has already
+been depleted and there is only a small quantity remaining, both the
+price and the extraction costs will be high. As reserves decline, the
+production cost for using resources increases and potential profits
+reduces. Accordingly, as marginal costs increase for extraction,
+producers will begin to conserve non-renewable resources because the
+marginal benefit thereof is smaller. Pindyck (1978) can be incorporated
+into a model of sustainable consumption by modelling that there is a
+cost in the future if consumption in the present period is too high.
+Consumption of resources is thus only sustainable if consumption in the
+present period does not impose a cost in the next period. However, the
+model in this paper does not consider the more realistic situation in
+which the non-renewable resource quantities are uncertain and thus does
+not address the possibility of exhausting a resource in its entirety.
+
+Adler \& Treich (2017) consider three dimensions of climate policy to be
+modelled: (i) equity, (ii) time, and (iii) risk which each impact how
+risky consumption is allocated intertemporally. These three dimensions
+can be interpreted as beliefs which are used in our model to inform the
+optimal level of consumption and probability of crisis. The cake-eating
+problem for an uncertain quantity of resources with a social planner who
+allocates between the current and future generation is modelled in terms
+of three different social welfare functions. The first generation is
+given a determinate amount of consumption, but the second generation is
+given the risky remainder. Our model also includes only the first
+period's consumption as the choice variable which then impacts the
+second period, but instead of first period consumption directly
+impacting what is remaining for the next period, in our model
+consumption impacts the probability of crisis. The methodology used is a
+prioritarian social welfare function (SWF) which is the sum of some
+increasing, concave function of utility for the well-being of a
+generation. To find the optimal consumption allocation, Adler \& Treich
+(2017) compare statics analysis for the different functions.
+
+However, these aforemetioned papers do not consider the uncertain
+thresholds which cannot be exceeded without incurring a cost, more
+specifically without altering the trajectory of an economy permanently
+ie crisis. Kemp (1976) was the first to consider the cake-eating
+optimisation problem for an non-renewable resource of an unknown size
+and has since been developed in the literature. Loury (1978)
+investigates the optimal planning for an economy faced with two main
+problems; (i) the possibility of exhaustion of the resource, and (ii)
+learning about the distribution of reserves over time through
+exploration and extraction activities. Under certainty, when the size of
+the resource reserve is known, the possibility of exhaustion occurs only
+asymptotically. However, when the resource reserve quantity is of
+unknown size, the date upon which it will have been completely exploited
+is also a random variable. The choice of the rate of consumption is
+necessarily affected by the impact of the consumption rate on the
+probability of crisis, or likelihood of reaching the tipping point. This
+feature is incorporated directly into our model as the consumption in
+period one which is believed to be optimal directly determines
+individual's beliefs regarding the optimal probability of crisis, and
+thus affects the choice of consumption. Loury (1978) demonstrates that
+the possibility of premature exhaustion alters the requirements of an
+optimal consumption path. Moreover, the model used in this paper
+specifies some minimal level of resource consumption that is necessary
+to sustain an economy, which is incorporated into our model as the lower
+consumption threshold, and the uncertain reserve of resources is a
+random variable that is drawn from a cumulative density function, which
+is a mechanism that our model employs to draw unknown values.
 
 Kumar (2005) reconsiders Kemp's use of an infinite planning horizon by
 instead using a hazard function which is defined as the probability of
@@ -330,9 +362,9 @@ under uncertainty' has two main aspects: (i) optimal planning horizon
 and (ii) the characterisation of optimal program. The former aspect of
 the (i) optimal planning horizon can be assumed to extend far enough
 into the future to allow for the resource to be fully exhausted at some
-point. By employing a hazard function to model the problem, this
-planning horizon over which consumption of the exhaustible resource is
-positive has been found to be either finite or infinite. The findings of
+point. By employing a hazard function to model the problem, the planning
+horizon over which consumption of the exhaustible resource is positive
+has been found to be either finite or infinite. The main findings of
 Kumar (2005) are that if an uncertain resource stock is finite and the
 optimal planning horizon is finite, hazard rates increase in unbounded
 fashion, and marginal utility of extraction and consumption at zero is
@@ -341,33 +373,18 @@ planning horizon is infinite. Thus, the optimal rate of extraction and
 consumption over time generally moves monotonically in the opposite
 direction to the hazard rate.
 
-Adler \& Treich (2017) consider additional elements that are not
-included in Kumar (2005) which are involved in the decision for optimal
-climate policy. There are three dimensions of climate policy modelled:
-(i) equity, (ii) time, and (iii) risk which each impact how risky
-consumption is allocated intertemporally. The cake-eating problem for an
-uncertain quantity of resources with a social planner allocating between
-the current and future generation is modelled in terms of three
-different social welfare functions. The first generation is given a
-determinate amount of consumption, but the second generation is given
-the risky remainder. The methodology used is a prioritarian social
-welfare function (SWF) which is the sum of some increasing, concave
-function of utility for the well-being of a generation. To find the
-optimal consumption allocation, Adler \& Treich (2017) compare statics
-analysis for the different functions.
-
-Lemoine \& Traeger (2014) address the need to integrate policy with
+Lemoine \& Traeger (2014) addresses the need to integrate policy with
 possibility of climate tipping points into a benchmark integrated
-assessment model'' to analyse the intertemporal trade-offs that
+assessment model to analyse the intertemporal trade-offs which
 characterise climate policy decisions. Crossing the threshold shifts the
-world permanently to a new altered system with different dynamics to
-pre-threshold. The paper ``analytically demonstrated that tipping points
-affect optimal policy via two channels: the differential welfare impact
-(DWI) recognizes that today's policy choices affect welfare in the case
-that a tipping point occurs, and the marginal hazard effect (MHE)
-recognizes that today's policy choices affect the probability of
-crossing the threshold.'' endogenises welfare and probability of tipping
-point.
+world permanently to a new altered system with different dynamics to the
+state of the world pre-threshold. The paper demonstrates with an
+analytical model that optimal policy is impacted by tipping points via
+two channels; namely (the differential welfare impact (DWI) recognizes
+that the present period's policy choices affect (i) welfare if a tipping
+point occurs, and (ii) the probability of crossing the threshold.
+Accordingly, the paper's model endogenises welfare and the probability
+of tipping point, which our model incorporates.
 
 On the political economy side of the literature, Piketty (1999) provides
 a short survey of recent contributions to the literature related to
@@ -376,14 +393,14 @@ Condorcet (1785) was the first to posit that political institutions have
 a constructive role in efficiently aggregating information in a society.
 His main contribution to the literature was termed the `Condorcet Jury
 Theorem' which states that under free elections, the probability that
-the the policy that is preferred by the majority will win by majority
-vote tends to one as the number of individuals in the population tends
-to infinity. This theorem posits democracy is an efficient
-information-aggregation system if it is assumed that individuals are
+the policy that is preferred by the majority will win by majority vote
+tends to one as the number of individuals in the population tends to
+infinity. This theorem posits democracy is an efficient
+information-aggregation system if it is assumed that (i) individuals are
 homogenous in their initial prior beliefs about the state of the world,
-each receives a signal drawn from the same conditional distribution and
-that it is realistic that more than half of citizens are right/ more
-than half of the time.
+(ii) each receives a signal drawn from the same conditional distribution
+and (iii) that it is realistic that more than half of citizens are
+right/ more than half of the time.
 
 Many models of political economy include different stages to analyse how
 voting impacts policies but vary according to how voters' derive utility
@@ -392,7 +409,7 @@ al}, 2005). Lohmann (1994) investigated the impact of the information
 aggregated by political action before a vote on whether votes cast are
 more or less accurate, where accuracy is defined in terms of reflecting
 voters' preferences. The paper models that each individual has a loss
-function which dictates the loss if policy outcome is not what the
+function which dictates the loss if the policy outcome is not what the
 individual desired and the private cost if the individual engaged in
 political action. The equilibrium point is where an individual's
 political action strategy minimises her expected loss after the
@@ -490,6 +507,8 @@ policy outcomes than if they acted unilaterally.
 \section{Model set-up of sustainable consumption in global
 economy}\label{model-set-up-of-sustainable-consumption-in-global-economy}}
 
+(approx 1250)
+
 The first specification of the model will be set up in a global economy
 in which there is only one population of voters and information is
 aggregated imperfectly. Voters are uncertain about the true penalty that
@@ -533,15 +552,17 @@ U\left(c_1\right)=u\left(c_1\right)+\mathbb{E} u\left(c_2\left(c_1\right)\right)
 and is subject to the constraint that it should not exceed \(\tilde{c}\)
 and be set between the lowest threshold (\(c_L\)) and the highest
 threshold (\(c_H\)). In this setting, \(c_L\) represents the safest
-level of consumption at which the probability of a crisis is zero. This
-may be considered to be the very lowest consumption that is required to
-continue living (ref?). On the other hand, \(c_H\) represents the
-maximum consumption value that may be consumed in period one without
-incurring a penalty and thus represents a ``tipping point'' (Lemoine \&
-Traeger**) which once it is exceeded, the probability of a crisis is
-one. If consumers had perfect information, the optimal choice of \(c_1\)
-should be set at \(c_H\) to maximise consumption in both period one and
-period two by ensuring that \(c_1\) is sustainable.
+level of consumption at which the probability of a crisis is zero, and
+can be regarded as some minimal level of resource consumption that is
+necessary to sustain an economy (Loury, 1978). This may be considered to
+be the very lowest consumption that is required to continue living
+(ref?). On the other hand, \(c_H\) represents the maximum consumption
+value that may be consumed in period one without incurring a penalty and
+thus represents a ``tipping point'' (Lemoine \& Traeger**) which once it
+is exceeded, the probability of a crisis is one. If consumers had
+perfect information, the optimal choice of \(c_1\) should be set at
+\(c_H\) to maximise consumption in both period one and period two by
+ensuring that \(c_1\) is sustainable.
 
 \[
 \operatorname{Pr}\left(\tilde{c} \leq c_1\right)=\left\{\begin{array}{cc}
@@ -662,6 +683,8 @@ which is the median voter.
 with
 bargaining}\label{model-set-up-of-sustainable-consumption-in-two-country-economy-with-bargaining}}
 
+(approx 1250 but now 650)
+
 To develop the model set-up further, the impact of another country's
 consumption level on the optimal level of consumption is incorporated.
 The implications of a two-country model that consider the
@@ -731,7 +754,7 @@ consumption level.
 \hypertarget{discussion-and-results}{%
 \section{Discussion and results}\label{discussion-and-results}}
 
-(approx 1000)
+(approx 1700 but now 900)
 
 To analyse whether co-operation in the political economy between two
 countries is harmful for environmental policies and mitigating climate
@@ -803,7 +826,7 @@ assignment(??).
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.45\linewidth]{images/Fig4_0.1Size0Bias} 
+{\centering \includegraphics[width=0.8\linewidth]{images/Fig4_0.1Size0Bias} 
 
 }
 
@@ -833,17 +856,28 @@ as the probability of crisis in Nash equilibrium is higher, as in Table
 Bias}\label{country-a-share-and-0-bias}}
 \addcontentsline{toc}{subsection}{0.5 Country A share and 0 Bias}
 
-In this model variation, the share of each country is 50/50, and as a
-result the population size for . There is no bias introduced. As in the
-previous model variation, both countries receive signals that are
-uniformly distributed, as in Figure (\textgreater\textgreater)
+In this model variation, the share of each country's population is
+50/50, as the parameter of country A share is set to 0.5. As a result,
+the population size in our estimation for country A was 484 and 516 for
+country B. This model serves to show how two countries which are of
+similar sizes may impact each other's consumption levels. There is no
+bias introduced in this model and, as in the previous model variation,
+both countries receive signals that are uniformly distributed (Figure
+(5.5).
 
-Size of country A is 484 and country B is 516 c\_average\_NE =1.2134
-prob\_crisis\_NE = 0.7134
+The comparison of Figure 5.2 against 5.1 and the global democracy point
+shows that when two countries are similarly sized, each country's best
+response is to consume at higher levels. Thus, the Nash equilibrium
+point is much higher at \(c_1=1.2134\) for each country. Similar to the
+previous model of 0.1 country A share, the beliefs of individuals has
+not been adjusted. Figure 5.5 shows that most individuals believe that
+approximately 0.52 is the optimal probability of crisis. Therefore, a
+higher consumption point as a Nash equilibrium in this model is
+sub-optimal and welfare-reducing for both countries.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.45\linewidth]{images/Fig4_0.5Size0Bias} 
+{\centering \includegraphics[width=0.8\linewidth]{images/Fig4_0.5Size0Bias} 
 
 }
 
@@ -855,11 +889,34 @@ prob\_crisis\_NE = 0.7134
 Bias}\label{country-a-share-0.9-bias}}
 \addcontentsline{toc}{subsection}{0.5 Country A share 0.9 Bias}
 
-N\_A = 523 N\_B = 477 c\_average\_NE = 1.2234 prob\_crisis\_NE =0.7234
+In our final variation model, a change in the parameter for bias is
+implemented. As aforementioned, a higher bias value means that there is
+a higher probability that individuals in country A will receive higher
+private signals and believe that a higher consumption level and
+probability of crisis is optimal. The population is kept at 50/50, and
+is 523 for country A and 477 for country B in this estimation.
+
+Table 1 shows that this final model yields both the highest period one
+consumption for country B and the highest probability of crisis.
+Therefore, it seems that the worst outcome across the four models
+considered is the situation in which two countries are approximately
+equal in size but one country receives fundamentally different private
+signals about climate change. In Figure 5.3, the Nash equilibrium
+consumption point is significantly higher than the global democracy
+point.
+
+However, to compare Figure 5.2 and Figure 5.3, the difference in Nash
+equilibrium points is not significantly different. Thus it is worse to
+go from a large-small country scenario to a two equal sized country
+scenario.
+
+The probability of crisis in Nash equilibrium for this model variation
+is 0.7234, which is the optimal probability of crisis for less than one
+individual in country A and no individuals in country B. Moreover,
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.45\linewidth]{images/Fig4_0.5Size0.9Bias} 
+{\centering \includegraphics[width=0.8\linewidth]{images/Fig4_0.5Size0.9Bias} 
 
 }
 
@@ -869,30 +926,31 @@ N\_A = 523 N\_B = 477 c\_average\_NE = 1.2234 prob\_crisis\_NE =0.7234
 Kemp (1976) comparative static results
 
 \begin{center}
-Table 1: Model comparison
+Table 1: Nash equilibrium values for country B's period one consumption and the probabiility of crisis across four different model variations
 \end{center}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3636}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3030}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2286}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2857}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2857}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2000}}@{}}
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Country A period 1 consumption
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Probability of crisis in NE
+Country B period 1 consumption
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Probability of crisis
 \end{minipage} \\
 \midrule()
 \endhead
-Global democracy & 0.9499 & 0.4499 \\
-Two countries 0.1 share & 1.0363 & 0.5363 \\
-Two countries 0.5 share & 1.2134 & 0.7134 \\
-Two countries 0.9 bias & 1.2234 & 0.7234 \\
+Global democracy & 0.9499 & N/A & 0.4499 \\
+Two countries 0.1 share & 1.5 & 1.0363 & 0.5363 \\
+Two countries 0.5 share & 1.2134 & 1.2134 & 0.7134 \\
+Two countries 0.9 bias & 1.2234 & 1.2234 & 0.7234 \\
 \bottomrule()
 \end{longtable}
-
-\#ADD A COLUMN TO THIS !!!! COUNTRY A AND COUNTRY B
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
