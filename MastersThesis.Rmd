@@ -229,125 +229,115 @@ This model builds on Besley & Coate (1998)'s model which selects candidates exog
 
 ## Voters {-}
 
-Besley & Coate (1998) finds that according to the median voter result and Condorcet Jury theorem, there is one ultimate winning candidate which is the median voter. According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed signals that determine preferences and beliefs about the probability of crisis) then the median voter will be the winning candidate in a vote, if we assume voter sincerity (*ref). 
+Besley & Coate (1998) finds that according to the median voter result and Condorcet Jury theorem, there is one ultimate winning candidate which is the median voter. According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed private signals in this model which determine preferences and beliefs about the probability of crisis) then the median voter will be the winning candidate in a vote, if we assume voter sincerity and a democratic voting system. Further assumptions made that it is simple majority voting and that each candidate could be running for public office. 
 
-Assume democracy
-
-Assume simple majority voting and that each candidate could be running for public office, thus each voter considers each pairwise comparison between each individual. Voters are assumed to know that candidates could only implement their preferred policy, in this context their individual optimal consumption point and how this maps onto their optimal probability of crisis. Besley & Coate (1998) voters voting decisions are their best response given the rest of voters decisions. Use the same assumption that candidates cannot credibly commit to any other policy other than their own policy preference and voters know this, which is realistic.
+To determine the winning candidate, each voter considers each pairwise comparison between each individual's policy preferences. Voters are assumed to know that candidates could only implement their preferred policy. This is a realistic assumption as it follows from the assumption that that candidates cannot credibly commit to any other policy other than their own policy preference and voters know this. Policy preferences are thus in this context their individual optimal consumption point and how this maps onto their optimal probability of crisis. Based on the pairwise comparison, the voter votes for the individual which maximises their expected utility.
 
 #	Model set-up of sustainable consumption in two-country economy with bargaining
 
 (approx 1250 but now 650)
 
-To develop the model set-up further, the impact of another country's consumption level on the optimal level of consumption is incorporated. The implications of a two-country model that consider the interdependence between countries is more realistic, for example in an IEA, especially considering that global climate change cannot be achieved by one country acting unilaterally (ref?). 
+## Economy {-}
 
-As in the global democracy model set-up, each citizen in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis. Accordingly, if individuals are signalled to believe that the climate crisis would not reduce $c_2$ by much, then a higher probability of this climate crisis occurring is not worrisome.
+To develop the model set-up further, the impact of another country's consumption level on the optimal level of consumption is incorporated. Accordingly, this model specification introduces two countries; country A and country B. The implications of a two-country model which considers the interdependence between countries is more realistic, as the global setting is increasingly globalised in terms of greater international trade of goods and services (Ortiz-Ospina, 2018). A prime example is the consideration of the impact of an IEA, as considered in Buchholz _et al._ (2005). This is especially worth investigation considering that it has been found that achieving the Paris agreement's limit of global warming to two degrees Celcius cannot be achieved by one country acting unilaterally (Ferrari & Pagliani, 2021). 
 
-Individuals in the global economy are split into two different country populations after each individual has received their private signals. Each individual is divided probabilistically into country A and country B to ensure random splitting. The probability of being assigned to country A depends on two parameters ($countryAshare$ and $bias$) in addition to the cumulative density function ($cdf$) of each individual's private signal. For each individual, a number is drawn between 0 and 1 and if this draw is less than or equal to the probability of country A, then the individual is assigned to country A. If not, the individual is assigned to country B.
+eqn**
+
+## Consumers {-}
+
+As in the global democracy model set-up, each individual in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis. Individuals which are signalled to believe that the climate crisis would not reduce $c_2$ by much, then a higher probability of this climate crisis occurring is not worrisome. These private signals are drawn again from a uniform distribution between $c_L$ and $c_H$, and are identically distributed in each country unless, unless adjustable parameters are changed to create bias in one country's distribution of beliefs. 
+
+Individuals in the global economy are split into two different country populations after each individual has received their private signals. Each individual is divided probabilistically into country A and country B to ensure random splitting. The probability of being assigned to country A depends on two parameters ($countryAshare$ and $bias$) in addition to the cumulative density function ($cdf$) of each individual's private signal. To assign an individual to a country, a number is randomly drawn between 0 and 1 and if this draw is less than or equal to the probability of country A value computed for an individual, then the individual is assigned to country A. If not, the individual is assigned to country B.
 
 $$probability_{of}country A = country A share + bias(cdf_{of}signal - country A share)$$
 
-Second, the expected utilities for every possible candidate are computed under the assumption that each citizen runs for election and promises to implement their their ideal consumption if elected. Accordingly, each voter considers any pairwise competition based on the expected utility they will obtain based on their own belief about $\tilde{c}$ as formed due to their private signal $\hat{\underline{c}}_k$ if the any candidate implements their promised, preferred policy.
-
 In addition to the fixed parameters discussed in the preceding section, there are adjustable parameters in the two country case. Variations in country share A can be implemented by selecting a value between 0 and 0.5, which alters the target fraction of the global democracy population that will be probabilistically assigned to country A. Variations in bias can be implemented by selecting a value between 0 and 0.9. This represents the bias in country A as if the value is higher, then country A's voters are more likely to receive higher signals and thus are more likely to believe a higher optimal consumption level and a higher optimal probability of crisis. To compare the voting outcomes between different scenarios, three variations of the two-country model are estimated. Firstly, the 0.1 country A share case in which the size of two-countries differ dramatically. Secondly, the 50/50 country split case in which each country is equal in size. Lastly, the 0.9 bias for country A case in which country A is more likely to contain individuals who received a higher private signal, and thus have a higher optimal consumption level and higher optimal probability of crisis.
 
-Next, find the mutual best responses for each country given what the other country's beliefs based on their private signals are. Each country votes for the candidate that will yield the best response given how the other country votes to maximise expected utility. For example, if country A is biased to consume at a high level, then it would be a best response for country B to consume at a lower level to reduce the probability of crisis to be closer to country B's optimal probability of crisis. The Nash equilibrium in the two-country model is determined using Matlab's built-in optimisers. In each country, each indiviual has a best response function and vote for the median candidate, as found in the median voter theory (ref??), conditional on the other country's consumption level.
+## Voters {-}
+
+As in the global democracy, the expected utilities for every possible candidate are computed under the assumption that each citizen runs for election and promises to implement their their ideal consumption if elected. Accordingly, each voter considers any pairwise competition based on the expected utility they will obtain based on their own belief about $\tilde{c}$ as formed due to their private signal $\hat{\underline{c}}_k$ if the any candidate implements their promised, preferred policy.
+
+Next, find the mutual best responses for each country given what the other country's beliefs based on their private signals are. Each country votes for the candidate that will yield the best response given how the other country votes to maximise expected utility. For example, if country A is biased to consume at a high level, then it would be a best response for country B to consume at a lower level to reduce the probability of crisis to be closer to country B's optimal probability of crisis. The Nash equilibrium in the two-country model is determined using Matlab's built-in optimisers. In each country, each individual has a best response function and votes for the candidate that maximises their expected utility, conditional on the other country's consumption level as well as their own consumption level.
+
+EXPLAIN BARGAINING RESULTS FROM BESLEY AND BUCHHOLZ
 
 # Discussion and results 
 
 (approx 1700 but now 900)
 
-To analyse whether co-operation in the political economy between two countries is harmful for environmental policies and mitigating climate crisis, the global democracy model set-up is compared to three variations of the two-country case. Buchholz _et al_ (2005) compares the isolationist case of one country implementing climate policies unilaterally against the bargaining case with an IEA implemented between two countries to analyse the impact of IEAs on environmental policy. Similarly, this paper compares the global democracy of one global economy against the Nash equilibrium solution found in the case of two countries which bargain together according to an IEA.
-
-
-
-Buchholz _et al_ (2005) reaches an analytical result in which voters may be incentivised to vote for less green candidates in order to improve their own country’s bargaining position when there is an IEA, which implies that unless there is full co-operation, any bargaining outcome is bad for environmental policy and the probability of a climate crisis. Besley & Coate (1998) also suggests that non-co-operation with other countries may yield a greater expected utility than if co-operation occurs. 
-
-Voters in global economy vote for the median because this maximises their expected utility.
-
-Are imbalances good or bad????
-Unless there is full co-operation, any bargaining is sub-optimal
-
-
+To analyse whether co-operation in the political economy between two countries is harmful for environmental policies and mitigating climate crisis, the global democracy model set-up is compared to three variations of the two-country case. Buchholz _et al_ (2005) compares the isolationist case of one country implementing climate policies unilaterally against the bargaining case with an IEA implemented between two countries to analyse the impact of IEAs on environmental policy. Similarly, this paper compares the global democracy of one voter population with a uniform distribution of beliefs against the Nash equilibrium solution found in the case of two countries which bargain together with three variations; namely the assymetric country size model, the symmetric size model and the assymetric bias size model.
 
 \newpage
 
-```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for 0.1 country A share"}
+```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for assymetric country size model"}
 
 knitr::include_graphics('images/Fig2_0.1Size0Bias.jpg')
 ```
 
-```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for 50/50 country split"}
+```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for symmetric country size model"}
 
 knitr::include_graphics('images/Fig2_0.5Size0Bias.jpg')
 ```
 
-```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for 0.9 bias for country A"}
+```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for assymetric bias model"}
 
 knitr::include_graphics('images/Fig2_0.5Size0.9Bias.jpg')
 ```
 
 
-## 0.1 Country A share 0 Bias {-}
+## Assymetric country size model {-}
 
-In the first variation of the two-country model, the country A share parameter is set to 0.1, which means that the probabilistic assignment of an individual being a citizen in country A is smaller. In our numerical simulation, the result of this is that the population in country A is 104 and in country B is 896. This demonstrates that the probabilistic assignment results in a random and imperfect assignment(??).
+In the first variation of the two-country model, the country A share parameter is set to 0.1. The implication of decreasing this parameter value is that the probabilistic assignment of an individual being a citizen in country A is reduced. In our numerical simulation, the result of this is an asymmetric country size, as the resultant distribution of individuals are that the population in country A is 104 and in country B is 896. This demonstrates that the probabilistic assignment results in an imperfect assignment.
 
-```{r, echo=FALSE, out.width="80%", fig.cap="0.1 Country A share model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B"}
+```{r, echo=FALSE, out.width="80%", fig.cap="Assymetric country size model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B"}
 
 knitr::include_graphics('images/Fig4_0.1Size0Bias.jpg')
 ```
 
-As in Figure 5.1, when country A has a significantly smaller population size it is a best response for country A to consume at the highest threshold $c_1=c_H=1.5$ that is possible irrespective of the consumption level that country B chooses. On the other hand, country B's best response is to consume at a significantly lower level of approximately $c_1=1$ irrespective of what country A consumes. Some of this higher consumption level in country A may be due to the higher private signals given to country A citizens, as in Figure (>>). In comparison to the global democracy point plotted on the Figure 5.1, both countries consume more in period 1 which could only be optimal if both countries' individuals believe that a higher probability of crisis is optimal. However, this difference in beliefs is not the case in this model variation because it only differs from the global democracy in one aspect, which is the country size. Thus this outcome is slightly less efficient than the global democracy case, as the probability of crisis in Nash equilibrium is higher, as in Table 1. 
+As is shown in Figure 5.1, when country A has a significantly smaller population size it is a best response for country A to consume at the highest threshold $c_1=c_H=1.5$ that is possible, irrespective of the consumption level that country B chooses. On the other hand, country B's best response is to consume at a significantly lower level of approximately $c_1=1$ irrespective of what country A consumes. Some of this disparity between consumption levels in country A and country B may be due to the slightly higher private signals given to country A citizens, as in Figure 5.4. Both countries in the assymetric country size model consume more in period 1 which could only be a better outcome in comparison to the global democracy point (plotted on Figure 5.1) if both countries' individuals believe that a higher probability of crisis is optimal. However, there is not a difference in beliefs from the global democracy model in this model variation. The assymetric country size model only differs from the global democracy model in one aspect, which is the country size. Thus this outcome is slightly less efficient than the global democracy case, as the probability of crisis in Nash equilibrium is higher, as shown in Table 5.1. 
 
-## 0.5 Country A share and 0 Bias {-}
+## Symmetric country size model {-}
 
-In this model variation, the share of each country's population is 50/50, as the parameter of country A share is set to 0.5. As a result, the population size in our estimation for country A was 484 and 516 for country B. This model serves to show how two countries which are of similar sizes may impact each other's consumption levels. There is no bias introduced in this model and, as in the previous model variation, both countries receive signals that are uniformly distributed (Figure (5.5). 
+In this second model variation, the share of each country's population is symmetric, as the parameter of country A share is set to 0.5. As a result, the population size in our estimation for country A was 484 and 516 for country B, which is approximately symmetric. This model serves to show how two countries which are of similar sizes may impact each other's consumption levels. There is no bias introduced in this model and, as in the assymetric country size model variation and the global democracy model, both countries receive signals that are uniformly distributed (Figure 5.5). Therefore, between countries beliefs are not substantially different.
 
-The comparison of Figure 5.2 against 5.1 and the global democracy point shows that when two countries are similarly sized, each country's best response is to consume at higher levels. Thus, the Nash equilibrium point is much higher at $c_1=1.2134$ for each country. Similar to the previous model of 0.1 country A share, the beliefs of individuals has not been adjusted. Figure 5.5 shows that most individuals believe that approximately 0.52 is the optimal probability of crisis. Therefore, a higher consumption point as a Nash equilibrium in this model is sub-optimal and welfare-reducing for both countries. 
+The comparison of Figure 5.2 against 5.1 and the global democracy point shows that when two countries are similarly sized, each country's best response is to consume at higher levels. As shown in Table 5.1, the Nash equilibrium point is much higher at $c_1=1.2134$ for each country. The associated optimal probability of crisis for this consumption level is Figure 5.5 shows that most individuals believe that approximately 0.52 is the optimal probability of crisis. A higher consumption point as a Nash equilibrium in this model is sub-optimal and welfare-reducing for both countries. Moreover, it is not a Pareto efficient outcome because it would be better for both countries to consume less but due to imperfect co-operation, this outcome cannot be achieved.
 
-```{r, echo=FALSE, out.width="80%", fig.cap="50/50 country split model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B"}
+```{r, echo=FALSE, out.width="80%", fig.cap="Symmetric country size model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B"}
 
 knitr::include_graphics('images/Fig4_0.5Size0Bias.jpg')
 ```
 
-## 0.5 Country A share 0.9 Bias {-}
+## Assymetric country bias model {-}
 
 In our final variation model, a change in the parameter for bias is implemented. As aforementioned, a higher bias value means that there is a higher probability that individuals in country A will receive higher private signals and believe that a higher consumption level and probability of crisis is optimal. The population is kept at 50/50, and is 523 for country A and 477 for country B in this estimation.
 
-Table 1 shows that this final model yields both the highest period one consumption for country B and the highest probability of crisis. Therefore, it seems that the worst outcome across the four models considered is the situation in which two countries are approximately equal in size but one country receives fundamentally different private signals about climate change. In Figure 5.3, the Nash equilibrium consumption point is significantly higher than the global democracy point.
+Table 5.1 shows that this final model yields both the highest period one consumption for country B and the highest probability of crisis. Therefore, it seems that the worst outcome across the four models considered is the situation in which two countries are approximately equal in size but one country receives fundamentally different private signals about climate change. In Figure 5.3, the Nash equilibrium consumption point is significantly higher than the global democracy point.
 
 However, to compare Figure 5.2 and Figure 5.3, the difference in Nash equilibrium points is not significantly different. Thus it is worse to go from a large-small country scenario to a two equal sized country scenario.
 
 The probability of crisis in Nash equilibrium for this model variation is 0.7234, which is the optimal probability of crisis for less than one individual in country A and no individuals in country B. Moreover, 
 
-```{r, echo=FALSE, out.width="80%", fig.cap="0.9 Country A bias model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B"}
+```{r, echo=FALSE, out.width="80%", fig.cap="Assymetric country bias model: Kernel density function of the distribution of the optimal probabilty of crisis and frequency thereof across individuals in country A and country B"}
 
 knitr::include_graphics('images/Fig4_0.5Size0.9Bias.jpg')
 ```
 
-Kemp (1976) comparative static results 
+The main objective of the comparison across model variations is to determine whether imbalances are beneficial or harmful for advancing environmental policy objectives.Buchholz _et al_ (2005) reaches an analytical result in which voters may be incentivised to vote for less green candidates in order to improve their own country’s bargaining position when there is an IEA. This implies that unless there is full co-operation, any bargaining outcome is bad for environmental policy and the probability of a climate crisis. Besley & Coate (1998) also suggests that non-co-operation with other countries may yield a greater expected utility than if co-operation occurs. 
 
-
-
-
+\newpage
 \begin{center}
-Table 1: Nash equilibrium values for country B's period one consumption and the probabiility of crisis across four different model variations
+Table 5.1: Nash equilibrium values for country B's period one consumption and the probabiility of crisis across four different model variations
 \end{center}
 ```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 tabl2 <- "
 |                        |Country A period 1 consumption|Country B period 1 consumption|Probability of crisis|
 |------------------------|:----------------------------:|:----------------------------:|:-------------------:|
 |Global democracy        | 0.9499                       |    N/A                       |0.4499               |          
-|Two countries 0.1 share | 1.5                          | 1.0363                       |0.5363               |            
-|Two countries 0.5 share | 1.2134                       |1.2134                        |0.7134               |
-|Two countries 0.9 bias  | 1.2234                       | 1.2234                       |0.7234               |
+|Assymetric country size | 1.5                          | 1.0363                       |0.5363               |            
+|Symmetric country size  | 1.2134                       |1.2134                        |0.7134               |
+|Assymetric country bias | 1.2234                       | 1.2234                       |0.7234               |
 "
 cat(tabl2)
-```
-
-
-```{r Figure1,  warning =  FALSE, fig.align = 'center', fig.cap = "Caption Here \\label{Figure1}", fig.ext = 'png', fig.height = 3, fig.width = 6}
-
 ```
 
 # Conclusion
@@ -359,5 +349,6 @@ cat(tabl2)
 
 # References {-}
 
-
+(Ortiz-Ospina, 2018) https://ourworldindata.org/trade-and-globalization
+(Ferrari & Pagliani, 2021) https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2568~573204d7e7.en.pdf
 
