@@ -214,11 +214,11 @@ The decision problem faced by consumers in the global democracy is to maximise t
 $$
 U\left(c_1\right)=u\left(c_1\right)+\mathbb{E} u\left(c_2\left(c_1\right)\right)
 $$
-subject to $c_1 \leq \tilde{c}$ and $c_L \leq c_1 \leq c_H$
+\begin{center}
+subject to $c_L \leq c_1 \leq c_H$
+\end{center}
 
-In this problem, consumers' choice of $c_1$ is subject to the constraint that it should not exceed $\tilde{c}$ and be set between the lowest threshold ($c_L$) and the highest threshold ($c_H$). If consumers had perfect information, the optimal choice of $c_1$ should be set at $c_H$ to maximise consumption in both period one and period two by ensuring that $c_1$ is sustainable. 
-
-However, to develop the model further we introduce the probability of crisis (Loury, 1978). In this setting, $c_L$ represents the safest level of consumption at which the probability of a crisis is zero. This can be regarded as some minimal level of consumption that is necessary to sustain an economy or the very least amount of resources that are required to continue living (Loury, 1978). On the other hand, $c_H$ represents the maximum consumption value that may be consumed in period one at which the probability of crisis is one. This can be regarded as some upper bound of consumption possibilities where it is certain that the threshold $\tilde{c}$ will be reached. Due to the uncertain value of $\tilde{c}$ that is drawn from a uniform distribution between $c_L$ and $c_H$, $c_H$ thus represents a certainty of reaching the "tipping point" (Kumar, 2005; Lemoine & Traeger, 2014). Accordingly, if this unknown threshold $\tilde{c}$ is exceeded, the crisis occurs below $c_H$. 
+We assume that the unknown tipping point $\tilde{c}$ is uniformly distributed btween two known boundaries $c_L$ and $c_H$. In this setting, $c_L$ represents the safest level of consumption at which the probability of a crisis is zero. This can be regarded as some minimal level of consumption that is necessary to sustain an economy or the very least amount of resources that are required to continue living (Loury, 1978). On the other hand, $c_H$ represents the maximum consumption value that may be consumed in period one at which the probability of crisis is one. This can be regarded as some upper bound of consumption possibilities where it is certain that the threshold $\tilde{c}$ will be reached. Due to the uncertain value of $\tilde{c}$ that is drawn from a uniform distribution between $c_L$ and $c_H$, $c_H$ thus represents a certainty of reaching the "tipping point" (Kumar, 2005; Lemoine & Traeger, 2014). Accordingly, if this unknown threshold $\tilde{c}$ is exceeded, the crisis occurs below $c_H$. 
 
 $$
 \operatorname{Pr}\left(\tilde{c} \leq c_1\right)=\left\{\begin{array}{cc}
@@ -229,31 +229,31 @@ $$
 $$
 
 We make the assumption that the utility functions of all consumers are homogenous (Piketty, 1999) where the utility derived from consumption is assumed to take the relative risk aversion functional form and $\rho$ is assumed to be set at 1.5 as follows:
+
 $$
 U(C)=\frac{c^{1-\rho}-1}{1-\rho}
 $$
 
+To introduce a role for political aggregation of private information in the model, we assume that there are different beliefs about the severity of the _climate crisis_ if the _tipping point_ is crossed. Specifically, we assume as in Besley & Coate (1998)?? that individuals differ in their beliefs about the level of consumption that would be possible if the crisis occurs ($\underline{c}$). These beliefs are determined by private signals $\hat{\underline{c}}_k$ which consumers receive.
 
-Due to the uncertainty in the consumer problem, because there is a lack of consensus regarding the state of the world in the second period, consumers hold beliefs about the optimal level of consumption in period one $c_1$ and the probability of crisis at that level of consumption. As in Besley & Coate (1998) there is uncertainty regarding the worst case scenario and how severe the crisis will be if it were to materialise. There is thus uncertainty regarding the true optimal level of consumption because there are different beliefs across individuals. These beliefs are determined by private signals $\hat{\underline{c}}_k$ which consumers receive.
-
+\begin{center}
 $$
 \hat{\underline{c}}_k=\underline{c}+\varepsilon_k
 $$
-\begin{center}
 where  $\mathbb{E}\left(\varepsilon_k\right)=0$ 
 \end{center}
 
-It is assumed that $\hat{\underline{c}}_k$ are drawn from a uniform distribution between $c_L$ and $c_H$. These signals are noisy and conceal the true value of $\underline{c}$, and thus information aggregation is not perfect in this model. This is a realistic assumption because in the real world consumers are exposed to a variety of news sources and political action which each suggest different probabilities for future climate outcomes (Piketty, 1999; Lohmann, 1994).
+We assume that these private signals $\hat{\underline{c}}_k$ are drawn from a distribution between $c_L$ and $c_H$. These signals are noisy and conceal the true value of $\underline{c}$, and thus information aggregation is not perfect in this model. This is a realistic assumption because in the real world consumers are exposed to a variety of news sources and political action which each suggest different probabilities for future climate outcomes (Piketty, 1999; Lohmann, 1994).
 
-From the signals that are drawn randomly for each individual, there are different associated optimal probability of crisis points. Therefore, the different signals that individuals draw determine their beliefs about which probability of crisis is optimal, and thus lifetime utility constitutes the utility derived from period one consumption and the expected utility of the weighted probability average of period two consumption as follows: 
+From the signals that are drawn randomly for each individual, there are different associated optimal probability of crisis points. The different signals that individuals draw determine their beliefs about which probability of crisis is optimal, and thus lifetime utility constitutes the utility derived from consumption in period one $c_1$ and the expected utility of the weighted probability average of period two consumption as follows: 
 
 $$
 U\left(c_1 \mid \hat{\underline{c}}_{k}\right)=u\left(c_1\right)+\operatorname{Pr}\left(\tilde{c} \leq c_1\right) u\left(\hat{\underline{c}}_{k}\right)+\left(1-\operatorname{Pr}\left(\tilde{c} \leq c_1\right)\right) u\left(c_1\right)
 $$
 
-In this model, the thresholds of consumption in period one are set as exogenous, fixed parameters. The global population is set to 1000. The set of possible consumption choices are set to 100 and are bounded between the thresholds, which are set to $c_L$ = 0.5 and $c_H$ = 1.5 respectively. To alter the threshold values of consumption could yield different results but beyond the scope of this paper. However, adjustable parameters are introduced into the two-country model in the subsequent section of this paper. 
+In this model, the thresholds of consumption in period one are set as exogenous, fixed parameters. The global population is set to 1000. The set of possible consumption choices are set to 100 and are bounded between the thresholds, which are set to $c_L$ = 0.5 and $c_H$ = 1.5 respectively. These choices are arbitrary, but serves as a proof-of-concept of this model structure. Future research will extend the specifications to be more realistic or calibrated to scientific and economic data. However, adjustable parameters are introduced into the two-country model in the subsequent section of this paper. 
 
-Figure 1 shows the cumulative density function of the probability of crisis. It is curved due to the relative risk aversion functional form. Figure 1 indicates that individuals who receive higher private signals hold a more optimistic belief about how severe the environmental crisis may be. An individual’s optimal probability of crisis depends on the signal provided to the individual. The higher the signal, the higher the optimal consumption point and thus the higher the optimal probability of crisis. Individuals that have been provided with information which indicates that the climate crisis will be mild will consume more and thus be comfortable with a higher probability of crisis. Thus, beliefs are a key driver of consumption choices in our model.
+Figure 1 shows the cumulative distribution function of the probability of crisis. It is curved due to the relative risk aversion functional form. Figure 1 indicates that individuals who receive higher private signals believe that the consumption level that is possible in the _climate crisis_ will be higher, and thus will optimally prefer a higher probability of the crisis occuring. An individual’s optimal probability of crisis depends on the signal provided to the individual. The higher the signal, the higher the optimal consumption point and thus the higher the optimal probability of crisis. Individuals that have been provided with information which indicates that the climate crisis will be mild will consume more and thus be comfortable with a higher probability of crisis. Thus, beliefs are a key driver of consumption choices in our model.
 
 ```{r, echo=FALSE, out.width="80%", fig.cap="Optimal probability of crisis as mapped from different beliefs about the optimal consumption level"}
 
@@ -264,31 +264,31 @@ This model builds on Besley & Coate (1998)'s model which selects candidates exog
 
 ## Voters {-}
 
-Voters are assumed to be homogenous in all respects except their beliefs; which are determined entirely by the private signals that they receive. Besley & Coate (1998) find that according to the median voter result and the Condorcet Jury theorem, there is one ultimate winning candidate which is the median voter. According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed private signals in this model which determine beliefs) then the median voter will be the winning candidate in a global democracy vote, if we assume voter sincerity and a democratic voting system. 
+Voters are assumed to be homogenous in all respects except their beliefs; which are determined entirely by the private signals that they receive. Besley & Coate (1998) find that according to the median voter result and the Condorcet Jury theorem, there is one ultimate winning candidate which is the median voter. According to the median voter theorem, if preferences are single peaked (which is implied by the uniformly distributed private signals in this model which determine beliefs) then the median voter will be the winning candidate in a global democracy vote, if we assume voter sincerity and a democratic voting system.^[The median voter result was checked numerically and holds up to numerical precision.] 
 
 It is further assumed that voting is conducted according to simple majority voting and that each candidate could be running for public office. As such, voters are assumed to have a continuous choice set of possible candidates which ranges across the different beliefs of individuals in the economy exactly. Voting is thus endogenised, as the winning candidate is the candidate that yields the highest expected utility for every pairwise comparison (Buchholz _et al._, 2005)
 
 To determine the winning candidate, each voter considers each pairwise comparison between each individual's policy preferences. Voters are assumed to know that candidates could only implement their preferred policy. This is a realistic assumption as it follows from the assumption that that candidates cannot credibly commit to any other policy other than their own policy preference and voters know this. Policy preferences are thus in this context their individual optimal consumption point and how this maps onto their optimal probability of crisis. Based on the pairwise comparison, the voter votes for the individual which maximises their expected utility.
 
-#	Model set-up of sustainable consumption in two-country economy with bargaining
+#	Consumption choices in two non-cooperative democracies
 
 _(approx 758...aim for 1200?)_
+
+_"The key concern in this paper, as in Buchholz..., is the failure of coordination of aggreements across countries. I model this in a similar way, but only consider the non-cooperative outcomes in this thesis. I assume that there are two countries (a partition of the global populations) that each functions as an independent democracy. The populations in each country elect their leaders independently, and the leader implements their preferred choice of consumption, taking as given the consumption choice of the other country. The key mechanisms is that each country independently selects their own consumption value, but that the risk of a global crisis is determined by the average level of consumption in the global economy. Thus, consumers in a given country do not fully internalize the costs and risks of their choices in the global setting._  
 
 ## Economy {-}
 
 To develop the model set-up further, the impact of another country's consumption level on the optimal level of consumption is incorporated. Accordingly, this model specification introduces two countries; country A and country B. The implications of a two-country model which considers the interdependence between countries is more realistic, as the global setting is increasingly globalised in terms of greater international trade of goods and services (Ortiz-Ospina, 2018). A prime example is the consideration of the impact of an IEA, as considered in Buchholz _et al._ (2005). _This is especially worth investigation considering that it has been found that achieving the Paris agreement's limit of global warming to two degrees Celcius cannot be achieved by one country acting unilaterally (Ferrari & Pagliani, 2021)._ 
 
-_eqn**?????_
-
 ## Consumers {-}
 
-As in the global democracy model set-up, each individual in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis. Individuals which are signalled to believe that the climate crisis would not reduce $c_2$ by much, then a higher probability of this climate crisis occurring is not worrisome. These private signals are drawn again from a uniform distribution between $c_L$ and $c_H$, and are identically distributed in each country unless, unless adjustable parameters are changed to create bias in one country's distribution of beliefs. 
+As in the global democracy model, each individual in each country receives private signals $\hat{\underline{c}}_k$ which determine their optimal level of individual consumption and this maps onto their optimal probability of crisis. Individuals which are signalled to believe that the climate crisis would not reduce $c_2$ by much, then a higher probability of this climate crisis occurring is not worrisome. These private signals are drawn again from a distribution between $c_L$ and $c_H$, and are identically distributed in each country unless, unless adjustable parameters are altered to create asymmetries. We study two dimensions of asymmetries in this model specification, namely in the relative size and bias in the beliefs of the countries.
 
-Individuals in the global economy are split into two different country populations after each individual has received their private signals. Each individual is divided probabilistically into country A and country B to ensure random splitting. The probability of being assigned to country A depends on two parameters ($countryAshare$ and $bias$) in addition to the cumulative density function ($cdf_{of}signal$) of each individual's private signal. To assign an individual to a country, a number is randomly drawn between 0 and 1 and if this draw is less than or equal to the probability of country A value computed for an individual, then the individual is assigned to country A. If not, the individual is assigned to country B.
+Individuals in the global economy are split into two different country populations, after each individual has received their private signals, according to a stochastic assignment. Each individual is divided probabilistically into either country A or country B to ensure random splitting. 
 
-$$probability_{of}country A = country A share + bias(cdf_{of}signal - country A share)$$
+In addition to the fixed parameters discussed in the preceding section, there are adjustable parameters in the two country case. Variations in country share A can be implemented by selecting a value between 0 and 0.5, which alters the target fraction of the global democracy population that will be probabilistically assigned to country A. Variations in bias can be implemented by selecting a value between 0 and 0.9. This represents the bias in country A as if the value is higher, then country A's voters are more likely to receive higher signals and thus are more likely to believe a higher optimal consumption level and a higher optimal probability of crisis. 
 
-In addition to the fixed parameters discussed in the preceding section, there are adjustable parameters in the two country case. Variations in country share A can be implemented by selecting a value between 0 and 0.5, which alters the target fraction of the global democracy population that will be probabilistically assigned to country A. Variations in bias can be implemented by selecting a value between 0 and 0.9. This represents the bias in country A as if the value is higher, then country A's voters are more likely to receive higher signals and thus are more likely to believe a higher optimal consumption level and a higher optimal probability of crisis. To compare the voting outcomes between different scenarios, three variations of the two-country model are estimated. Firstly, the 0.1 country A share case in which the size of two-countries differ dramatically. Secondly, the 50/50 country split case in which each country is equal in size. Lastly, the 0.9 bias for country A case in which country A is more likely to contain individuals who received a higher private signal, and thus have a higher optimal consumption level and higher optimal probability of crisis.
+To compare the voting outcomes between different scenarios, three variations of the two-country model are estimated. Firstly, the 0.1 country A share case in which the size of two-countries differ dramatically. Secondly, the 50/50 country split case in which each country is equal in size. Lastly, the 0.9 bias for country A case in which country A is more likely to contain individuals who received a higher private signal, and thus have a higher optimal consumption level and higher optimal probability of crisis.
 
 ## Voters {-}
 
@@ -296,30 +296,24 @@ As in the global democracy, the expected utilities for every possible candidate 
 
 Next, find the mutual best responses for each country given what the other country's beliefs based on their private signals are. Each country votes for the candidate that will yield the best response given how the other country votes to maximise expected utility. For example, if country A is biased to consume at a high level, then it would be a best response for country B to consume at a lower level to reduce the probability of crisis to be closer to country B's optimal probability of crisis. The Nash equilibrium in the two-country model is determined using Matlab's built-in optimisers. In each country, each individual has a best response function and votes for the candidate that maximises their expected utility, conditional on the other country's consumption level as well as their own consumption level.
 
-EXPLAIN BARGAINING RESULTS FROM BESLEY AND BUCHHOLZ
+In the case of strategic considerations that are not fully internalised, there are two main findings. Non-cooperative results between two parties are found to be worse than cooperative results, and Nash bargaining results are found to lie somewhere in between these two polarised results. Thus the focus of this paper is to analyze how the non-cooperative results depend on asymmetries which Buchholz et al do not study.  leaving the bargaining results for future research. 
 
 # Discussion and results 
 
 _(1130)_
 
-To analyse whether co-operation in the political economy between two countries is harmful for environmental policies and mitigating climate crisis, the global democracy model set-up is compared to three variations of the two-country case. Buchholz _et al._ (2005) compares the isolationist case of one country implementing climate policies unilaterally against the bargaining case with an IEA implemented between two countries to analyse the impact of IEAs on environmental policy. Similarly, this paper compares the global democracy of one voter population with a uniform distribution of beliefs against the Nash equilibrium solution found in the case of two countries which bargain together with three variations; namely the assymetric country size model, the symmetric size model and the assymetric bias size model.
+To analyse whether THE LACK OF co-operation in the political economy between two countries is harmful for environmental policies and mitigating climate crisis, the global democracy model set-up is compared to three variations of the two-country case. Buchholz _et al._ (2005) compares the isolationist case of one country implementing climate policies unilaterally against the bargaining case with an IEA implemented between two countries to analyse the impact of IEAs on environmental policy. Similarly, this paper compares the global democracy of one voter population with a uniform distribution of beliefs against the Nash equilibrium solution found in the case of two countries which bargain together with three variations; namely the asymmetric country size model, the symmetric size model and the asymmetric bias size model.
 
-\newpage
+I would first give a clean analysis of the symmetric case
+- give the country sizes (population) explicitly, the kernel densities showing that the distribution of optimal choices are identical and the best response function figures (discuss the values in the text as well)
 
-```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for assymetric country size model"}
+Then assymetric size (same sequence)
+- 
 
-knitr::include_graphics('images/Fig2_0.1Size0Bias.jpg')
-```
+Then asymmetric opinions (bias) (same sequence)
 
-```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for symmetric country size model"}
+Then summarize in the table. Add an additional column for the global outcomes, and add country sizes and median desires as rows. 	
 
-knitr::include_graphics('images/Fig2_0.5Size0Bias.jpg')
-```
-
-```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for assymetric bias model"}
-
-knitr::include_graphics('images/Fig2_0.5Size0.9Bias.jpg')
-```
 
 
 ## Assymetric country size model {-}
@@ -374,18 +368,55 @@ tabl2 <- "
 "
 cat(tabl2)
 ```
+Add an additional column for the global outcomes, and add country sizes and median desires as rows. 
 
 # Conclusion
 
 (800)
 
-Buchholz _et al._ (2005) suggests to overcome the lack of co-operation, could create mandatory side-payments that must be paid by the country that induces pollution in the other country to the other country to account for the negative externality which would adjust voters and politicans payoffs to consider environmental degradation more directly and thus lead to better co-operative outcomes. But in their model they include the trade-off between domestic product and environmental policies, so would not improve our models outcomes, would require a different specification
+Buchholz _et al._ (2005) suggests to overcome the lack of co-operation, could create mandatory side-payments that must be paid by the country that induces pollution in the other country to the other country to account for the negative externality which would adjust voters and politicians payoffs to consider environmental degradation more directly and thus lead to better co-operative outcomes. But in their model they include the trade-off between domestic product and environmental policies, so would not improve our models outcomes, would require a different specification
 
+
+\newpage
+
+# Appendix {-}
+
+```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for assymetric country size model"}
+
+knitr::include_graphics('images/Fig2_0.1Size0Bias.jpg')
+```
+
+```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for symmetric country size model"}
+
+knitr::include_graphics('images/Fig2_0.5Size0Bias.jpg')
+```
+
+```{r, echo=FALSE, out.width="45%", fig.cap="Nash equilibrium for assymetric bias model"}
+
+knitr::include_graphics('images/Fig2_0.5Size0.9Bias.jpg')
+```
 
 \newpage
 
 # References {-}
 
-(Ortiz-Ospina, 2018) https://ourworldindata.org/trade-and-globalization
-(Ferrari & Pagliani, 2021) https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2568~573204d7e7.en.pdf
+Adler, M. D. & Treich, N. Utilitarianism, prioritarianism, and intergenerational equity: A cake eating model. _Mathematical Social Sciences_, 87(1):94-102.
+
+Besley, T. & Coate, S. 1997. An economic model of representative democracy. _Quarterly Journal of Economics_, 112(1):85-114.
+
+Buchholz, W., Haupt, A. & Peters, W. 2005. _The Scandinavian Journal of Economics_, 107(1):175-195.
+
+Kumar, R. C. 2005. How to eat a cake of unknown size: A reconsideration. _Journal of Environmental Economics and Management_, 50(1):408-421.
+
+Lemoine, D. & Traeger, C. 2014. Watch Your Step: Optimal Policy in a Tipping Climate. _American Economic Journal: Economic Policy_, 6(1):137-166.
+
+Lohmann, S. 1994. Information Aggregation Through Costly Political Action. _The American Economic Review_, 84(3):518-530.
+
+Loury, G. C. 1978. The Optimal Exploitation of an Unknown Reserve. _The Review of Economic Studies_, 45(3):621-636.
+
+Piketty, T. 1999. The information-aggregation approach to political institutions. _European Economic Review_, 43(1):791-800.
+
+Pindyck, R. S. 1978. The Optimal Exploration and Production of Nonrenewable Resources. _Jorunal of Political Economy_, 86(5):841-861.
+
+Razin, R. 2003. Signaling and election motivations in a voting model with common values and responsive candidates. _Econometrica_, 71(4):1083-1119.
 
